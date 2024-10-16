@@ -34,4 +34,29 @@ router.get('/', (req, res, next) => {
     });
 });
 
+router.post('/', (req, res, next) => {
+    console.log(req.body);
+    res.status(201).json({
+        message: '메뉴 생성되었습니다.',
+        menu: {
+            id: 123,
+        }
+    });
+});
+
+router.put('/:menuId', (req, res, next) => {
+    const id = req.params.menuId;
+    console.log(req.body);
+    res.status(200).json({
+        message: `메뉴 ${id} 수정되었습니다.`
+    });
+});
+
+router.delete('/:menuId', (req, res, next) => {
+    const id = req.params.menuId;
+    res.status(200).json({
+        message: `메뉴 ${id} 삭제되었습니다.`
+    });
+});
+
 export default router;
