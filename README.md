@@ -1,8 +1,7 @@
-
 # 스파르타 베이직 카페
 
-
 ## 목차
+
 1. [프로젝트 설정](#프로젝트-설정)
 2. [API 엔드포인트](#api-엔드포인트)
 3. [데이터베이스 설정](#데이터베이스-설정)
@@ -14,6 +13,7 @@
 ## 프로젝트 설정
 
 1. **레포지토리 클론**:
+
    ```bash
    git clone <repository-url>
    cd <project-directory>
@@ -33,13 +33,14 @@
    메뉴 수, 주문 수, 총 매출과 관련된 통계를 반환합니다.
 
    **응답**:
+
    ```json
    {
-       "stats": {
-           "totalMenus": 3,
-           "totalOrders": 10,
-           "totalSales": 30000
-       }
+     "stats": {
+       "totalMenus": 3,
+       "totalOrders": 10,
+       "totalSales": 30000
+     }
    }
    ```
 
@@ -49,29 +50,30 @@
 totalOrders 는 해당 메뉴의 총 주문 수를 나타냅니다.
 이 값을 제외하고 기능을 개발하고 마지막으로 totalOrders 를 추가하세요.
 
-   **응답**:
-   ```json
-   {
-       "menus": [
-           {
-               "id": 1,
-               "name": "Latte",
-               "type": "Coffee",
-               "temperature": "hot",
-               "price": 4500,
-               "totalOrders": 5
-           },
-           {
-               "id": 2,
-               "name": "Iced Tea",
-               "type": "Tea",
-               "temperature": "ice",
-               "price": 3000,
-               "totalOrders": 10
-           }
-       ]
-   }
-   ```
+**응답**:
+
+```json
+{
+  "menus": [
+    {
+      "id": 1,
+      "name": "Latte",
+      "type": "Coffee",
+      "temperature": "hot",
+      "price": 4500,
+      "totalOrders": 5
+    },
+    {
+      "id": 2,
+      "name": "Iced Tea",
+      "type": "Tea",
+      "temperature": "ice",
+      "price": 3000,
+      "totalOrders": 10
+    }
+  ]
+}
+```
 
 ## 데이터베이스 설정
 
@@ -92,6 +94,7 @@ totalOrders 는 해당 메뉴의 총 주문 수를 나타냅니다.
 
 1. **서버 실행**:
    데이터베이스 설정을 완료하고, API를 데이터베이스와 연동한 후, Node.js 서버를 실행합니다:
+
    ```bash
    npm run start
    ```
@@ -112,4 +115,3 @@ totalOrders 는 해당 메뉴의 총 주문 수를 나타냅니다.
 
 - 대소문자를 포함하여 오탈자가 있을 경우 화면에 값이 보이지 않을 수 있습니다. 명세를 확인해주세요.
 - 막히는게 있으면 언제든지 튜터님들을 찾아주세요!
-
