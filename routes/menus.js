@@ -98,14 +98,8 @@ router.get("/", async (req, res, next) => {
       };
     });
 
-    // 몇 시간을 잡아먹은거야...버근가..?
-    const menus = [];
-    menusFormatting.forEach((menu, index) => {
-      menus[index] = menu;
-    });
-
     // response
-    res.status(200).json({ menus });
+    res.status(200).json({ menus: menusFormatting });
   } catch (error) {
     console.log("get error", error);
     res.status(400).json("get error");
